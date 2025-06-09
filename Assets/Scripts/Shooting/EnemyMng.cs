@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnemyMng : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class EnemyMng : MonoBehaviour
     [SerializeField] GameObject EnemyB;
    public GameObject Boss;
     [SerializeField] Transform StoreEnemy;
-    [SerializeField] Text BossSpawnText;
-     public Image BossHpFill_Img;
-      public GameObject BossHpBar;
+    [SerializeField] TMP_Text BossSpawnText;
+    public Image BossHpFill_Img;
+    public GameObject BossHpBar;
     float SpawnTime = 2.0f;
-        float TimeCheck = 0;
+    float TimeCheck = 0;
     Vector3 RandomPosA;
     Vector3 RandomPosB;
     Vector3 Pos = new Vector3 (15, 0, 0);
@@ -22,10 +23,7 @@ public class EnemyMng : MonoBehaviour
     float BossSpawnTime = 0;
     public float CheckSpawnTime = 60;
     public int CheckSpawnTimeCheck = 60; 
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()

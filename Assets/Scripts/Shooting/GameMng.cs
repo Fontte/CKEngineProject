@@ -29,16 +29,12 @@ public class GameMng : MonoBehaviour
     }
 
     
-    [SerializeField] TextMeshProUGUI Clear_Text;
-    [SerializeField] TextMeshProUGUI BestScore_Text;   
+       
     [SerializeField] public GameObject Clear;
     [SerializeField] public EnemyMng enemyMng;
 
     private void Update()
-    {
-        
-
-        
+    {              
         if (SceneManager.GetActiveScene().name == "Shooting")
         {
             if (enemyMng.CheckSpawnTime <= 0)
@@ -53,23 +49,12 @@ public class GameMng : MonoBehaviour
             }
         }
     }
-
    
-
     IEnumerator GameClear() //게임클리어
     {
         yield return new WaitForSeconds(0.3f);
-
+        Clear.gameObject.SetActive(true);
         Time.timeScale = 0; 
 
-    }
-
-    
-
-    
-
-
-
-
-   
+    }   
 }

@@ -48,7 +48,7 @@ public class Bullet : MonoBehaviour
             ;
         }
 
-        if (other.tag == "CheckCo")
+        if (other.tag == "destroy")
         {
             Destroy(gameObject);
             // 이 태그가 붙어진 곳과 트리거충돌하면 총알이 사라지게된다.

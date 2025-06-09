@@ -17,7 +17,7 @@ public class EnemyB : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        EBulletGroup = GameObject.Find("EBulletGroup").transform;
+        EBulletGroup = GameObject.FindWithTag("EBulletGroup").transform;
     }
     // Update is called once per frame
 
@@ -73,7 +73,7 @@ public class EnemyB : MonoBehaviour
             
         }
 
-        if(other.tag == "Destroy")
+        if(other.tag == "Enemydestroy")
         {
             Destroy(gameObject);
            

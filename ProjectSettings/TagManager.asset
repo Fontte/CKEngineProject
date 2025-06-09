@@ -9,6 +9,11 @@ TagManager:
   - Boss
   - Bullet
   - EnemyB
+  - destroy
+  - EBulletGroup
+  - CheckCo
+  - Enemydestroy
+  - BossStop
   layers:
   - Default
   - TransparentFX

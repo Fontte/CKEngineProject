@@ -21,7 +21,7 @@ public class Boss : MonoBehaviour
     [SerializeField] Transform Boss_Muzzle;
    
     [SerializeField] GameObject EBullet_prefeb;
-    Transform EBulletGroup;
+     public Transform EBulletGroup;
     // Start is called before the first frame update
     void Start()
     {

@@ -51,7 +51,7 @@ public class EnemyA : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.tag == "Destroy")
+        if (other.tag == "Enemydestroy")
         {
             Destroy(gameObject);
         }

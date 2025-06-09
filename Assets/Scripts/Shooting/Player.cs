@@ -68,12 +68,12 @@ public class Player : MonoBehaviour
         if (other.tag == "EnemyA")
         {
             animator.SetTrigger("IsDmg");
-            Hp -= 3;
+            Hp -= 5;
         }
         else if (other.tag == "EnemyB")
         {
             animator.SetTrigger("IsDmg");
-            Hp -= 3;
+            Hp -= 5;
         }
         else if (other.tag == "Boss")
         {
@@ -111,16 +111,27 @@ public class Player : MonoBehaviour
 
     void UpdateHpUI()
     {
+        Debug.Log("현재 HP: " + Hp);
+
+        float hpPerHeart = MaxHp / HpHearts.Length;
         for (int i = 0; i < HpHearts.Length; i++)
         {
-            float heartValue = Hp - i;
+            float heartMin = i * hpPerHeart;
+            float heartMax = (i + 1) * hpPerHeart;
 
-            if (heartValue >= 1f)
+            if (Hp >= heartMax)
+            {
                 HpHearts[i].sprite = Heart_Full;
-            else if (heartValue >= 0.5f)
+            }
+            else if (Hp >= heartMin + hpPerHeart / 2f)
+            {
                 HpHearts[i].sprite = Heart_Half;
+            }
             else
+            {
                 HpHearts[i].sprite = Heart_Empty;
+            }
         }
     }
+
 }
